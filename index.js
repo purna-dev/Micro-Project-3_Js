@@ -146,3 +146,53 @@ console.log('-- ✔ 11. list all the food items with lowest cab content to highe
 lowestcabTohighest();
 
 
+// minified version of above code
+
+function listFood(foodItem) {
+   
+    if (foodItem.length > 0) {
+        return  food.filter(data => data.category === foodItem)
+    
+        
+    } else
+        return food;
+}
+// console.log(listFood(''))
+// console.log(listFood('Vegetable'))
+// console.log(listFood('Fruit'))
+// console.log(listFood('Protien'))
+// console.log(listFood('Grain'))
+// console.log(listFood('Nuts'))
+
+
+
+const calorie = (order)=>{
+   if(order == 'be'){
+    return food.filter(data=>data.calorie < 100)
+   }else if(order == 'ab'){
+    return food.filter(data=>data.calorie > 100)
+    
+   }
+}
+// console.log(calorie('be'))
+
+// console.log(calorie('ab'))
+
+
+const cabs = (order)=>{
+    if(order == 'desc'){
+     return food.sort((a,b)=>{
+                return b.protiens - a.protiens;
+            })
+    }else if(order == 'asce'){
+     return food.sort((a,b)=>{
+                return a.cab - b.cab;
+            })
+     
+    }
+ }
+//  console.log(cabs('desc'))
+//  console.log(cabs('asce'))
+
+
+
